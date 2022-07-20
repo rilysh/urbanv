@@ -45,6 +45,10 @@ Options:
 
 fn main() {
 	args := os.args.clone()
+	if args.len == 1 {
+		help()
+		return
+	}
 	match args[1] {
 		"-q" {
 			if args.len < 3 {
